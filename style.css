@@ -1,0 +1,12 @@
+body {
+  padding: 100px;
+}
+button,
+input {
+  font-family: monospace;
+  font-size: 30px;
+  padding: 10px;
+}
+#visibility {
+  background-color: blue;
+}
