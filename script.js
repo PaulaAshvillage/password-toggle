@@ -1,19 +1,13 @@
-// Add a input that holds a fictive password --done with html
+const button = document.querySelector("#btn");
 
-// choose element with query selector:
-const btn = document.querySelector("#btn");
-const visibility = document.querySelector("#visibility");
+button.addEventListener("click", function () {
+  const input = document.querySelector("#input-pw");
 
-let count = 1;
-// Event on element
-btn.addEventListener("click", function () {
-  count++;
-
-  if (count % 2 === 0) {
-    visibility.type = "text";
-    btn.innerText = "Hide Password";
+  if (input.getAttribute("type") === "password") {
+    input.type = "text";
+    button.innerText = "Hide Password";
   } else {
-    visibility.type = "password";
-    btn.innerText = "Show Password";
+    input.type = "password";
+    button.innerText = "Show Password";
   }
 });
